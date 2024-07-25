@@ -5,7 +5,7 @@
 PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
 echo $($PSQL "TRUNCATE students, majors, courses, majors_courses;")
 
-cat courses_test.csv | while IFS="," read MAJOR COURSE
+cat courses.csv | while IFS="," read MAJOR COURSE
 do
   if [[ $MAJOR != major ]]
   then
@@ -62,8 +62,6 @@ do
       # set to null
       MAJOR_ID=null
     fi
-
-
     # insert student
     INSERT_STUDENT_RESULT=$($PSQL "INSERT INTO students (first_name, last_name, major_id, gpa) VALUES ('$FIRST','$LAST',$MAJOR_ID,$GPA)")
     if [[ $INSERT_STUDENT_RESULT == "INSERT 0 1" ]]
