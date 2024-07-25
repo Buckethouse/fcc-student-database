@@ -26,3 +26,10 @@ __vsc_dbg_trap="$(__vsc_get_trap DEBUG)"
 trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 echo hello SQL
+git remote set -url origin https://github.com/Buckethouse/fcc-student-database.git
+git remote set-url origin https://github.com/Buckethouse/fcc-student-database.git
+branch -M main
+git branch -M main
+git push -u origin main
+git checkout -b course-start-07-24-2024
+git add .
