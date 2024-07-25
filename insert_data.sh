@@ -48,7 +48,6 @@ do
   fi
 done
 
-# cat courses_test.csv | while IFS="," read MAJOR COURSE
 
 cat students_test.csv | while IFS="," read FIRST LAST MAJOR GPA
 do
