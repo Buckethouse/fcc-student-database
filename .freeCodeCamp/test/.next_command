@@ -94,3 +94,4 @@ rm courses_test.csv
 __vsc_prompt_cmd_original
 ls --color=auto
 pg_dump --help
+pg_dump --clean --create --inserts --username=freecodecamp students > students.sql
